@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 100%;
+            /* padding-right: 15px;
+  padding-left: 15px; */
+            margin-right: auto;
+            margin-left: auto;
+            background-color: rgba(176, 245, 245, 0.726);
+        }
+
+        div {
+            margin: auto;
+
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body class="container">
+
+    <div>
+        <h1>
+            Palindrome Checking
+        </h1>
+
+        <input type="text" id='txt'>
+        <button type="button" onclick="abc()">Check</button><br>
+
+        <p id="p1"></p>
+    </div>
+
+
+
+    <script>
+        function abc() {
+            x = document.getElementById('txt').value.toLowerCase();
+            var y = x.split("").reverse().join("");
+
+            if (x === y) {
+                document.getElementById('p1').innerHTML = "Great! " + '<b>' + x + '</b>' + " is a Palindrome word";
+            } else {
+                document.getElementById('p1').innerHTML = "Oops! " + '<b>' + x + '</b>' + " is not a Palindrome word";
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

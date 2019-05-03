@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // (function abc(){
+    // alert("welcome");
+    // })();
+
+    // abc();
+    // var a = [2,3,4,5,6,7];
+    // var b = 2;
+    // function abc(name){
+    //     this.name*2;
+    //     return;
+    // }
+    
+    // abc(b);
+    // a.alpha();
+    
+    // [4,6,8,10,12,14]
+    
+
+function multiply(){
+    this.multiplyby2 = function(element){
+        if(element.length>1){
+            var multiple =[];
+            for (var i=0; i < element.length; i++){
+                multiple.push(element[i]*2);
+            }
+            return multiple;
+        }
+        else{
+            return element*2;
+        }
+    }
+    this.multiplyby3 = function(element){
+        if(element.length>1){
+            var multiple =[];
+            for (var i=0; i < element.length; i++){
+                multiple.push(element[i]*3);
+            }
+            return multiple;
+        }
+        else{
+            return element*2;
+        }
+    }
+}
+var a = [1,2,3,4,5,6]
+var multiply = new multiply();
+
+
+    function Queue () { 
+    collection = [];
+    this.enqueue = function(element) {
+        collection.push(element);
+    };
+    this.dequeue = function() {
+        return collection.shift(); 
+    };
+    this.print = function() {
+        console.log(collection);
+    };
+    this.front = function() {
+        return collection[0];
+    };
+    this.size = function() {
+        return collection.length; 
+    };
+    this.isEmpty = function() {
+        return (collection.length === 0); 
+    };
+    this.end = function(){
+        let q = collection.length-1;
+        return console.log(collection[q]);
+    };
+}
+
+var q = new Queue(); 
+// q.enqueue('a'); 
+// q.enqueue('b');
+// q.enqueue('c');
+// q.print();
+// q.dequeue();
+// q.enqueue('d');
+// q.print();
+// q.end();
+
+var Stack = function() {
+    this.count = 0;
+    this.storage = {};
+  
+    // Adds a value onto the end of the stack
+    this.push = function(value) {
+        this.storage[this.count] = value;
+        this.count++;
+    }
+    
+    // Removes and returns the value at the end of the stack
+    this.pop = function() {
+        if (this.count === 0) {
+            return undefined;
+        }
+
+        this.count--;
+        var result = this.storage[this.count];
+        delete this.storage[this.count];
+        return result;
+    }
+    
+    this.size = function() {
+        return this.count;
+    }
+    
+    // Returns the value at the end of the stack
+    this.peek = function() {
+        return this.storage[this.count-1];
+    }
+
+    this.print = function(){
+        var arr = this.storage;
+        return arr;
+    }
+}
+
+var myStack = new Stack();
+
+// myStack.push(1);
+// myStack.push(2);
+// console.log(myStack.peek());
+// console.log(myStack.pop());
+// console.log(myStack.peek());
+// myStack.push("freeCodeCamp");
+// console.log(myStack.size());
+// console.log(myStack.peek());
+// console.log(myStack.pop());
+// console.log(myStack.peek());
+
+
+    </script>
+</body>
+</html>
